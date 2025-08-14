@@ -2,7 +2,7 @@
 // Bagian ini berisi data untuk 40 nama yang dapat diubah sesuai kebutuhan
 const peopleData = [
     // BAGIAN 1 - 10 nama pertama (selalu terbuka di awal)
-    { name: "Ryan", password: "tegarkecelupsanten", clue: "Aku perempuan" },
+    { name: "Ryan", password: "tegarkecelupsanten", clue: "ini cuma tes" },
     { name: "Elda", password: "kaelaa", clue: "Anak SIEGA" },
     { name: "Michi", password: "passwordapa?", clue: "Aku Laki Laki" },
     { name: "Zen", password: "slametdisaster", clue: "Anak TI" },
@@ -499,4 +499,5 @@ function resetAllData() {
 
 // Panggil resetProgress() di console browser untuk reset progress user tertentu
 // Panggil resetAllData() di console browser untuk reset semua data
+
 */ 
