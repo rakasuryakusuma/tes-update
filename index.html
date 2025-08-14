@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fikom Guesser</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background animasi laut -->
+    <div class="ocean">
+        <div class="wave wave1"></div>
+        <div class="wave wave2"></div>
+        <div class="wave wave3"></div>
+    </div>
+    
+    <!-- Form Login/Register -->
+    <div id="authContainer" class="auth-container">
+        <div class="auth-box">
+            <div class="auth-tabs">
+                <button class="auth-tab active" data-tab="login">Login</button>
+                <button class="auth-tab" data-tab="register">Register</button>
+            </div>
+            
+            <!-- Form Login -->
+            <div id="loginForm" class="auth-form active">
+                <h2>Login</h2>
+                <input type="text" id="loginUsername" placeholder="Username" required>
+                <input type="password" id="loginPassword" placeholder="Password" required>
+                <button id="loginBtn" class="auth-btn">Login</button>
+                <div id="loginError" class="auth-error"></div>
+            </div>
+            
+            <!-- Form Register -->
+            <div id="registerForm" class="auth-form">
+                <h2>Register</h2>
+                <input type="text" id="registerUsername" placeholder="Username" required>
+                <input type="password" id="registerPassword" placeholder="Password" required>
+                <input type="password" id="confirmPassword" placeholder="Konfirmasi Password" required>
+                <button id="registerBtn" class="auth-btn">Register</button>
+                <div id="registerError" class="auth-error"></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Container utama (akan ditampilkan setelah login) -->
+    <div id="mainContainer" class="container" style="display: none;">
+        <header>
+            <div class="user-info">
+                <span id="welcomeText">Selamat datang!</span>
+                <button id="logoutBtn" class="logout-btn">Logout</button>
+            </div>
+            <h1>Fikom Guesser</h1>
+            <p>Buka semua nama dengan memasukkan password yang benar!</p>
+        </header>
+        
+        <!-- Daftar nama akan diisi oleh JavaScript -->
+        <div id="nameList" class="name-list">
+            <!-- Tombol nama akan ditambahkan di sini oleh JavaScript -->
+        </div>
+        
+        <!-- Progress indicator -->
+        <div class="progress-info">
+            <span id="progressText">Progress: 0/40</span>
+        </div>
+    </div>
+    
+    <!-- Modal/Popup untuk password dan clue -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3 id="modalTitle">Masukkan Password</h3>
+            <div id="modalBody">
+                <input type="password" id="passwordInput" placeholder="Masukkan password...">
+                <div id="clueDisplay" class="clue-display"></div>
+                <div id="errorMessage" class="error-message"></div>
+            </div>
+            <div class="modal-buttons">
+                <button id="submitBtn" class="btn-submit">Submit</button>
+                <button id="okBtn" class="btn-ok" style="display: none;">Oke</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html> 
